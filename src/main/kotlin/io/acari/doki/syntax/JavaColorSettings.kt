@@ -190,7 +190,7 @@ class JavaColorSettings : BaseColorSettings() {
     EMPTY_ARRAY
 
   override fun getDisplayName(): String =
-    "Java Additions"
+    "Doki Theme Java Additions"
 
   override fun getDemoText(): String =
     """public class <class>SomeClass</class> extends <class>BaseClass</class> {

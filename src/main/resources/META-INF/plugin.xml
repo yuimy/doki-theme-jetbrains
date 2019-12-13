@@ -34,6 +34,9 @@
   <depends>com.intellij.modules.lang</depends>
   <extensions defaultExtensionNs="com.intellij">
     <annotator language="JSON" implementationClass="io.unthrottled.doki.ide.DokiThemeColorAnnotator"/>
+    <annotator language="JAVA"
+               implementationClass="io.acari.doki.syntax.annotator.JavaAnnotator"/>
+    <colorSettingsPage implementation="io.acari.doki.syntax.JavaColorSettings"/>
     <applicationService serviceInterface="io.unthrottled.doki.themes.ThemeManager" serviceImplementation="io.unthrottled.doki.themes.impl.ThemeManagerImpl"/>
     <applicationService serviceInterface="io.unthrottled.doki.stickers.StickerService" serviceImplementation="io.unthrottled.doki.stickers.impl.StickerServiceImpl"/>
     <applicationService serviceImplementation="io.unthrottled.doki.config.ThemeConfig"/>
