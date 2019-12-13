@@ -4,7 +4,9 @@ import com.intellij.openapi.editor.DefaultLanguageHighlighterColors
 import com.intellij.openapi.editor.colors.TextAttributesKey
 import com.intellij.psi.PsiElement
 import com.intellij.util.ObjectUtils
+import io.acari.doki.util.toOptional
 import java.util.*
+import java.util.Optional.empty
 
 class JavaAnnotator : BaseAnnotator() {
   companion object {
@@ -26,8 +28,12 @@ class JavaAnnotator : BaseAnnotator() {
     )
   }
 
-  override fun getKeywordType(element: PsiElement): Optional<TextAttributesKey> {
-    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-  }
+  override fun getKeywordType(element: PsiElement): Optional<TextAttributesKey> =
+    when (element.text) {
+      "private", "public", "protected" -> MODIFIER.toOptional()
+      "static", "final" -> STATIC_FINAL.toOptional()
+      "this", "super" -> THIS_SUPER.toOptional()
+      else -> empty()
+    }
 
 }
