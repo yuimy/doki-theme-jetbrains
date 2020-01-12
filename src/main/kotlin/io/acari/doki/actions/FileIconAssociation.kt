@@ -5,11 +5,9 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.project.DumbAware
 import com.intellij.openapi.ui.Messages
+import com.intellij.psi.PsiElement
 import io.acari.doki.util.toOptional
 
-/**
- * Forged in the flames of battle by alex.
- */
 class FileIconAssociation : AnAction(), DumbAware {
     override fun actionPerformed(e: AnActionEvent) {
         val currentProject = e.project
@@ -22,5 +20,11 @@ class FileIconAssociation : AnAction(), DumbAware {
             .orElseGet { message.toString() }
 
         Messages.showMessageDialog(currentProject, fullMessage, title, Messages.getInformationIcon())
+    }
+
+    override fun update(e: AnActionEvent) {
+        val selectedItem = e.getData(CommonDataKeys.NAVIGATABLE)
+        val isEnabled = selectedItem is PsiElement
+        e.presentation.isEnabledAndVisible = isEnabled
     }
 }
