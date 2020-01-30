@@ -34,6 +34,7 @@ class ThemeConfig : PersistentStateComponent<ThemeConfig>, Cloneable {
 
   var isMaterialDirectories: Boolean = false
   var isMaterialFiles: Boolean = false
+  var isEmptyFiles: Boolean = true
   var isMaterialPSIIcons: Boolean = false
 
   override fun getState(): ThemeConfig? =
