@@ -28,7 +28,7 @@ class MaterialIconProvider : IconProvider(), DumbAware {
       .flatMap { PsiUtilCore.getVirtualFile(element).toOptional() }
       .filter{ ThemeConfig.instance.isMaterialDirectories }
       .map { VirtualFileInfo(element, it) }
-      .map { DirectoryIconProvider.getIcon(it) }
+      .map { MaterialDirectoryIconProvider.getIcon(it) }
       .orElseGet { null }
   }
 
@@ -37,7 +37,7 @@ class MaterialIconProvider : IconProvider(), DumbAware {
       .flatMap { PsiUtilCore.getVirtualFile(element).toOptional() }
       .filter{ ThemeConfig.instance.isMaterialFiles }
       .map { VirtualFileInfo(element, it) }
-      .map { FileIconProvider.getIcon(it) }
+      .map { MaterialDirectoryIconProvider.getIcon(it) }
       .orElseGet { null }
   }
 }
