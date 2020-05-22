@@ -1,4 +1,4 @@
-package io.acari.doki.syntax.annotator
+package io.unthrottled.doki.syntax.annotator
 
 import com.intellij.lang.annotation.AnnotationHolder
 import com.intellij.lang.annotation.Annotator

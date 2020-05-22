@@ -1,4 +1,4 @@
-package io.acari.doki.syntax
+package io.unthrottled.doki.syntax
 
 import com.intellij.lang.Language
 import com.intellij.openapi.fileTypes.SyntaxHighlighter

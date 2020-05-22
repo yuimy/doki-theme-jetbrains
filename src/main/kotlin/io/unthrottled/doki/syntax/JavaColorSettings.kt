@@ -1,4 +1,4 @@
-package io.acari.doki.syntax
+package io.unthrottled.doki.syntax
 
 import com.intellij.icons.AllIcons
 import com.intellij.lang.Language.ANY
@@ -15,7 +15,7 @@ import com.intellij.psi.codeStyle.DisplayPriority
 import com.intellij.util.ObjectUtils.notNull
 import com.intellij.util.PlatformUtils.isIntelliJ
 import gnu.trove.THashMap
-import io.acari.doki.syntax.annotator.JavaAnnotator
+import io.unthrottled.doki.syntax.annotator.JavaAnnotator
 import javax.swing.Icon
 
 class JavaColorSettings : BaseColorSettings() {
