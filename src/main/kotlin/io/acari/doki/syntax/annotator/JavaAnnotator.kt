@@ -6,7 +6,7 @@ import com.intellij.openapi.editor.colors.TextAttributesKey.createTextAttributes
 import com.intellij.openapi.editor.colors.TextAttributesKey.find
 import com.intellij.psi.PsiElement
 import com.intellij.util.ObjectUtils.notNull
-import io.acari.doki.util.toOptional
+import io.unthrottled.doki.util.toOptional
 import java.util.*
 import java.util.Optional.empty
 

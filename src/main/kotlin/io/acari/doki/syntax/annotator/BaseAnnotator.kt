@@ -22,7 +22,7 @@ abstract class BaseAnnotator : Annotator {
           val annotation = holder.createAnnotation(
             HighlightSeverity.INFORMATION, range, null
           )
-          annotation.setTextAttributes(it)
+          annotation.textAttributes = it
         }
     }
   }
